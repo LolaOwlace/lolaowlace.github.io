@@ -42,7 +42,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   #loader .indicator .number {
     font-size: 7em;
   }
@@ -87,19 +87,19 @@ body {
   margin-top: -240px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   #inner .behind-header {
     margin-top: -190px;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   #inner .behind-header.desktop {
     margin-top: 0;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   #inner {
     padding-top: 190px;
   }
@@ -320,7 +320,7 @@ nav#filters ul li a.active, nav#filters ul li a:hover {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   nav#filters {
     text-align: center;
   }
@@ -446,7 +446,7 @@ header#main-header a.nav-link {
   z-index: 3;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 967px) {
   header#main-header a.nav-link:after {
     content: '';
     display: block;
@@ -462,7 +462,7 @@ header#main-header a.brand {
   position: relative;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   header#main-header {
     height: auto;
     position: absolute;
@@ -488,7 +488,7 @@ nav.main-nav ul li {
   position: relative;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 967px) {
   nav.main-nav ul li {
     z-index: 2;
   }
@@ -525,7 +525,7 @@ nav.main-nav ul li {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   ul.nav-links {
     overflow-y: auto;
     text-align: center;
@@ -652,7 +652,7 @@ nav.main-nav ul li {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   .hero {
     height: 550px;
   }
@@ -688,7 +688,7 @@ nav.main-nav ul li {
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 967px) {
   .hero {
     text-align: center;
   }
