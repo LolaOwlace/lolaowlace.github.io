@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 
     
-    <style>
-        .bg {
-            position: relative;  /* Position relative for absolute children */
-            width: 100%;  /* Full width of the parent */
-            height: 100%;  /* Full height of the parent */
-            overflow: hidden;  /* Hide any overflow */
-        }
+   
+	
 
-        video {
-            position: absolute;  /* Position the video absolutely within the container */
-            top: 50%;  /* Center vertically */
-            left: 50%;  /* Center horizontally */
-            width: 100vw;  /* Full viewport width */
-            height: auto;  /* Maintain aspect ratio */
-            min-height: 100%;  /* Minimum height to cover the container */
-            min-width: 100%;  /* Minimum width to cover the container */
-            transform: translate(-50%, -50%);  /* Adjust for centering */
-            object-fit: cover;  /* Cover the area without leaving space */
-        }
-    </style>
+
+
 
 <html lang="en">
   <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compound Media Inc.</title>
     
     
@@ -35,7 +20,59 @@
     <link rel="stylesheet" type="text/css" href="css/elements.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="icon" type="image/png" href="favicon.png?version=v1.0">
+	
+	 style>
+      .bg {
+          position: relative;  /* For absolute children */
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+      }
 
+      video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100vw;
+          height: auto;
+          min-height: 100%;
+          min-width: 100%;
+          transform: translate(-50%, -50%);
+          object-fit: cover;
+          z-index: 1;
+      }
+      
+      /* Dropdown visibility */
+      .menu-closed .nav-links {
+          pointer-events: none;
+          visibility: hidden;
+      }
+
+      .menu-open .nav-links {
+          pointer-events: auto;
+          visibility: visible;
+      }
+
+      /* Dropdown styling */
+      .nav-links li ul {
+          display: none;
+          position: absolute;
+          background-color: #fff; /* Add background */
+      }
+
+      .nav-links li:hover ul {
+          display: block; /* Show dropdown on hover */
+      }
+
+      .dropdown a {
+          display: block;
+          padding: 10px;
+          text-decoration: none;
+      }
+    </style>
+	
+	
+	 <!-- Header and Navigation -->
   </head>
   <body>
     <div id="wrapper" class="animsition">
@@ -52,6 +89,7 @@
         </section>
       </div>
 	  
+	  
       <header id="main-header">
         <div class="container">
           <div class="grid">
@@ -61,17 +99,41 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
               </div>
-			  
-			  
               <ul class="nav-links">
-                
-				<li class="col-1 brand" style="margin: -7px;"><a href="index.html"><img alt="Compound Media" src="images/logo.svg" class="default" height="50"></a></li>
-				
-                <li class="col-1"><a href="about.html" class="nav-link undefined">About</a> </li>
-                <li class="col-1 col-offset-1">
-				
-				<a href="projects-4-columns.html" class="nav-link undefined">What We Do</a>
-
+                <li class="col-1 brand" style="margin: -7px;"><a href="index.html"><img alt="Compound Media" src="images/logo.svg" class="default" height="50"></a></li>
+                <li class="col-1"><a href="about.html" class="nav-link undefined">About</a>
+                </li>
+                <li class="col-1 col-offset-1"><a href="projects-4-columns.html" class="nav-link undefined">What We Do</a>
+				<ul class="dropdown">
+                    <li><a href="projects-2-columns_01_TMS.html" class="nav-link undefined">Tailor-Made Solutions</a>
+                    </li>
+                    <li><a href="projects-2-columns_02_EVE.html" class="nav-link undefined">Event Visuals & Experiences</a>
+                    </li>
+                    <li><a href="projects-2-columns_03_VS.html" class="nav-link undefined">Visual Storytelling</a>
+                    </li>
+                    <li><a href="projects-2-columns_04_BF.html" class="nav-link undefined">Brand Foundations</a>
+                    </li>
+                    <li><a href="projects-2-columns_05_DE.html" class="nav-link undefined">Digital Experiences</a>
+                    </li>
+					<li><a href="projects-2-columns_06_AMA.html" class="nav-link undefined">Anime & Motion Art</a>
+                    </li>
+					<li><a href="projects-2-columns_07_EM.html" class="nav-link undefined">Effects Mastery</a>
+                    </li>
+					<li><a href="projects-2-columns_08_SDM.html" class="nav-link undefined">Sound Design & Mixology</a>
+                    </li>
+                  </ul>
+				  
+				  <ul class="dropdown">
+                    <li><a href="projects-2-columns_01_TMS.html">Tailor-Made Solutions</a></li>
+                    <li><a href="projects-2-columns_02_EVE.html">Event Visuals & Experiences</a></li>
+                    <li><a href="projects-2-columns_03_VS.html">Visual Storytelling</a></li>
+                    <li><a href="projects-2-columns_04_BF.html">Brand Foundations</a></li>
+                    <li><a href="projects-2-columns_05_DE.html">Digital Experiences</a></li>
+                    <li><a href="projects-2-columns_06_AMA.html">Anime & Motion Art</a></li>
+                    <li><a href="projects-2-columns_07_EM.html">Effects Mastery</a></li>
+                    <li><a href="projects-2-columns_08_SDM.html">Sound Design & Mixology</a></li>
+                  </ul>
+				  
                 </li>
                 <li class="col-1 col-offset-1"><a href="contact.html" class="nav-link undefined">Contact</a>
                 </li>
@@ -83,13 +145,10 @@
           </div>
         </div>
       </header>
-	  
       <div id="inner">
         <section class="behind-header">
           <div id="home-slider" class="titanSlider fh fw">
             <ul class="slides">
-			
-			   <!-- Slide 1 -->
 			<li class="slide dark">
 				  <div class="hero fs">
 					<div style="background-image: url(images/hero/01.jpg);" class="bg faded"></div>
@@ -312,5 +371,10 @@
     <script src="modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="js/functions.js"></script>
     <script>$('#home-slider').titanSlider();</script>
+	<script>function toggleMenu() {
+    const menu = document.querySelector('.menu');  // This should target the element that wraps the nav-links
+    menu.classList.toggle('menu-open');
+}
+}</script>
   </body>
 </html>

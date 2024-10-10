@@ -1,1 +1,24 @@
 /* This stylesheet is meant for custom styles, on top of The Peel Template */
+
+
+@media screen and (max-width: 950px) {
+  /* Initially, nav links are not clickable /
+  ul.nav-links a.nav-link {
+    pointer-events: none;
+  }
+
+  / Initially, set height of all li elements except those with class 'brand' to 0 /
+  ul.nav-links li:not(.brand) {
+    height: 0;
+    overflow: hidden;
+  }
+
+  / When menu-open class is applied, make nav links clickable and set height */
+  body.menu-open ul.nav-links a.nav-link {
+    pointer-events: auto;
+  }
+
+  body.menu-open ul.nav-links li {
+    height: auto;
+  }
+}
