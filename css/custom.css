@@ -1,39 +1,52 @@
 /* This stylesheet is meant for custom styles, on top of The Peel Template */
 
 
-/* Initially hide the nav links */
-
+/* Base styles for desktop and tablets */
 .nav-links {
-    display: none; /* Hide the menu */
-    opacity: 0; /* Optional: Keep this if you want a fade effect when showing */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    display: flex; /* Show the menu as a flex container for desktop/tablet */
+    opacity: 1; /* Fully visible by default */
 }
 
-/* Show the menu when active */
-.nav-links.active {
-    display: block; /* Show the menu */
-    opacity: 1; /* Make it fully visible */
-}
-
-/* Ensure the brand (logo) is hidden when nav-links are hidden */
 .brand {
-    display: none; /* Hide the logo initially */
-}
-
-/* Show the logo when nav-links are active */
-.nav-links.active .brand {
     display: block; /* Show the logo */
+    opacity: 1; /* Ensure the logo is fully visible */
 }
 
+/* Media Query for Mobile */
+@media (max-width: 950px) { /* Adjust this value as needed for your design */
+    /* Initially hide the nav links */
+    .nav-links {
+        display: none; /* Hide the menu */
+        opacity: 0; /* Optional: Keep this if you want a fade effect when showing */
+        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    }
 
-.logo-section {
-    /* Center the logo horizontally */
-    text-align: center; 
-    /* Optional: Add margin or padding for spacing */
-    margin: 30px 0; 
-}
+    /* Show the menu when active */
+    .nav-links.active {
+        display: block; /* Show the menu */
+        opacity: 1; /* Make it fully visible */
+    }
 
-.logo-section img {
-    /* Keep the logo responsive */
-    height: 50px; /* Adjust as needed */
+    /* Ensure the brand (logo) is visible on mobile */
+    .brand {
+        display: block; /* Show the logo */
+        opacity: 1; /* Ensure logo is fully visible */
+    }
+
+    /* Ensure the logo is not hidden when nav-links are hidden */
+    .nav-links.active .brand {
+        display: block; /* Show the logo when the menu is active */
+    }
+
+    .logo-section {
+        /* Center the logo horizontally */
+        text-align: center; 
+        /* Optional: Add margin or padding for spacing */
+        margin: 30px 0; 
+    }
+
+    .logo-section img {
+        /* Keep the logo responsive */
+        height: 50px; /* Adjust as needed */
+    }
 }
