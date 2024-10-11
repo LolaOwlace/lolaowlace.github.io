@@ -1,52 +1,27 @@
-/* This stylesheet is meant for custom styles, on top of The Peel Template */
+@media screen and (max-width: 950px) {
+  /* Initially, nav links are not clickable and completely invisible */
+  ul.nav-links {
+    display: none;
+  }
 
+  /* Initially, set height of all li elements except those with class 'brand' to 0, and remove padding and margin */
+  ul.nav-links li:not(.brand) {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
 
-/* Base styles for desktop and tablets */
-.nav-links {
-    display: flex; /* Show the menu as a flex container for desktop/tablet */
-    opacity: 1; /* Fully visible by default */
-}
+  /* When menu-open class is applied, make nav links visible, clickable, and set height */
+  body.menu-open ul.nav-links {
+    display: block;
+  }
 
-.brand {
-    display: block; /* Show the logo */
-    opacity: 1; /* Ensure the logo is fully visible */
-}
+  body.menu-open ul.nav-links a.nav-link {
+    pointer-events: auto;
+  }
 
-/* Media Query for Mobile */
-@media (max-width: 950px) { /* Adjust this value as needed for your design */
-    /* Initially hide the nav links */
-    .nav-links {
-        display: none; /* Hide the menu */
-        opacity: 0; /* Optional: Keep this if you want a fade effect when showing */
-        transition: opacity 0.3s ease; /* Smooth transition for opacity */
-    }
-
-    /* Show the menu when active */
-    .nav-links.active {
-        display: block; /* Show the menu */
-        opacity: 1; /* Make it fully visible */
-    }
-
-    /* Ensure the brand (logo) is visible on mobile */
-    .brand {
-        display: block; /* Show the logo */
-        opacity: 1; /* Ensure logo is fully visible */
-    }
-
-    /* Ensure the logo is not hidden when nav-links are hidden */
-    .nav-links.active .brand {
-        display: block; /* Show the logo when the menu is active */
-    }
-
-    .logo-section {
-        /* Center the logo horizontally */
-        text-align: center; 
-        /* Optional: Add margin or padding for spacing */
-        margin: 30px 0; 
-    }
-
-    .logo-section img {
-        /* Keep the logo responsive */
-        height: 50px; /* Adjust as needed */
-    }
+  body.menu-open ul.nav-links li {
+    height: auto;
+  }
 }
