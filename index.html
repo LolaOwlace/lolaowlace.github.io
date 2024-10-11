@@ -82,10 +82,15 @@
                 <div class="bar"></div>
               </div>
 			  
+			  					  <!-- Logo section, now always visible -->
+				<div class="logo-section">
+				  <a href="index.html">
+					<img alt="Compound Media" src="images/logo.svg" class="default" height="50">
+				  </a>
+				</div>
 			  
               <ul class="nav-links">
-                
-				<li class="col-1 brand" style="margin: -7px;"><a href="index.html"><img alt="Compound Media" src="images/logo.svg" class="default" height="50"></a></li>
+  
 				
                 <li class="col-1"><a href="about.html" class="nav-link undefined">About</a> </li>
                 <li class="col-1 col-offset-1">
@@ -317,5 +322,15 @@
     <script src="modules/tera-lightbox/tera-lightbox.js"></script>
     <script src="js/functions.js"></script>
     <script>$('#home-slider').titanSlider();</script>
+	<script>document.addEventListener("DOMContentLoaded", function() {
+    const navToggle = document.querySelector(".responsive-nav");
+    const navLinks = document.querySelector(".nav-links");
+
+    navToggle.addEventListener("click", function() {
+        // Toggle the 'active' class on the nav-links
+        navLinks.classList.toggle("active");
+    });
+});
+</script>
   </body>
 </html>

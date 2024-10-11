@@ -1,24 +1,39 @@
 /* This stylesheet is meant for custom styles, on top of The Peel Template */
 
 
-@media screen and (max-width: 950px) {
-  /* Initially, nav links are not clickable /
-  ul.nav-links a.nav-link {
-    pointer-events: none;
-  }
+/* Initially hide the nav links */
 
-  / Initially, set height of all li elements except those with class 'brand' to 0 /
-  ul.nav-links li:not(.brand) {
-    height: 0;
-    overflow: hidden;
-  }
+.nav-links {
+    display: none; /* Hide the menu */
+    opacity: 0; /* Optional: Keep this if you want a fade effect when showing */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
 
-  / When menu-open class is applied, make nav links clickable and set height */
-  body.menu-open ul.nav-links a.nav-link {
-    pointer-events: auto;
-  }
+/* Show the menu when active */
+.nav-links.active {
+    display: block; /* Show the menu */
+    opacity: 1; /* Make it fully visible */
+}
 
-  body.menu-open ul.nav-links li {
-    height: auto;
-  }
+/* Ensure the brand (logo) is hidden when nav-links are hidden */
+.brand {
+    display: none; /* Hide the logo initially */
+}
+
+/* Show the logo when nav-links are active */
+.nav-links.active .brand {
+    display: block; /* Show the logo */
+}
+
+
+.logo-section {
+    /* Center the logo horizontally */
+    text-align: center; 
+    /* Optional: Add margin or padding for spacing */
+    margin: 30px 0; 
+}
+
+.logo-section img {
+    /* Keep the logo responsive */
+    height: 50px; /* Adjust as needed */
 }
