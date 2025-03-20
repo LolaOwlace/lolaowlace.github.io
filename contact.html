@@ -10,12 +10,6 @@
     <link rel="stylesheet" type="text/css" href="css/elements.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="icon" type="image/png" href="favicon.png?version=v1.0">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-    function onSubmit(token) {
-        document.getElementById("contact-form").submit();
-    }
-    </script>
   </head>
   <body>
     <div id="wrapper" class="animsition">
@@ -101,14 +95,10 @@
                   <textarea required placeholder="Message" name="message" class="small form-control"></textarea>
                 </div>
                 <div class="col-2">
-                <input id="send" type="submit" value="Send" 
-                    class="btn btn-primary g-recaptcha" 
-                    data-sitekey="6LfFxfkqAAAAAGevDPN28AB8VYILnwtH66O9BlF1" 
-                    data-callback="onSubmit" 
-                    data-action="submit">
-
-                <input type="hidden" name="_next" value="https://icreatedanaccount.github.io/thank-you.html">
-                <input type="hidden" name="_captcha" value="false">
+               <input type="text" name="_honey" style="display:none">
+               <input id="send" type="submit" value="Send" class="btn btn-primary">
+               <input type="hidden" name="_next" value="https://icreatedanaccount.github.io/thank-you.html">
+               <input type="hidden" name="_captcha" value="false">
                 </div>
             </div>
         </section>
